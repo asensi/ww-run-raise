@@ -14,6 +14,7 @@ jobs:
         env:
           SHFMT_OPTS: -i 0 -d
         with:
+          additional_files: 'ww'   # It’s needed because the file "ww" doesn’t have a ".sh" extension
+          severity: warning   # Fail on warnings and errors (the default includes style)
           sh_checker_comment: true
           sh_checker_only_diff: true
-          sh_checker_shellcheck_disable: true
